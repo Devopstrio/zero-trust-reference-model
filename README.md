@@ -4,7 +4,7 @@
 
 <h1>Zero Trust Reference Model</h1>
 
-<p><strong>The Strategic Foundation for Enterprise Zero Trust Formal Modeling, Layered Security Interactions, and Policy Frameworks using Infrastructure as Code</strong></p>
+<p><strong>The Strategic Foundation for Enterprise Zero Trust Formal Modeling, Layered Security Interactions, and Policy Frameworks.</strong></p>
 
 [![Standard: Zero-Trust-Excellence](https://img.shields.io/badge/Standard-Zero--Trust--Excellence-blue.svg?style=for-the-badge&labelColor=000000)]()
 [![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-emerald.svg?style=for-the-badge&labelColor=000000)]()
@@ -13,7 +13,7 @@
 <br/>
 
 > **"A security model is the mathematical heart of Zero Trust."** 
-> Zero Trust Reference Model (ZT-Model) is an enterprise-grade platform designed to provide a secure, measurable, and highly automated foundation for global security formalization. It orchestrates the complex lifecycle of Zero Trust modeling—from layered architecture definitions and identity models to automated policy frameworks, incident response models, and unified security governance. By providing a centralized command center with unified model-as-code formalisms, automated evaluation pipelines, and immutable model logs, it enables organizations to eliminate security ambiguity, ensure rigorous trust verification, and drive secure digital transformation across the entire enterprise ecosystem.
+> **Zero Trust Reference Model** is an enterprise-grade platform designed to provide a secure, measurable, and highly automated foundation for global security formalization. It orchestrates the complex lifecycle of Zero Trust modeling—from layered architecture definitions and identity models to automated policy frameworks and incident response models.
 
 </div>
 
@@ -23,547 +23,261 @@
 
 Conceptual ambiguity and fragmented security models are strategic operational liabilities; lack of a formalized reference model is a primary barrier to mature Zero Trust adoption. Organizations fail to model their security not because of a lack of documentation, but because of fragmented modeling standards, lack of automated logic validation, and an inability to evaluate cross-layer trust with operational precision.
 
-This platform provides the **Security Model Intelligence Plane**. It implements a complete **Enterprise Model-as-Code Framework**—from modular Identity and Device layers to specialized Network and Data protection hubs. By operationalizing Zero Trust as a primary architectural pillar, it ensures that your global security stack is not just "documented," but continuously optimized and delivered with strategic performance-aligned precision.
+This platform provides the **Security Model Intelligence Plane**. It implements a complete **Enterprise Model-as-Code Framework**, enabling Security Architects and Research teams to manage the formal zero-trust model as a first-class citizen. By automating the verification of trust interactions and orchestrating real-time model-driven policies, we ensure that every organizational interaction—from API calls to data access—is modeled for security by default, audited for consistency, and strictly aligned with institutional formal logic.
 
 ---
 
-## 🏛️ Core Platform Pillars
+## 📐 Architecture Storytelling: Principal Reference Models
 
-1. **Layered Model Formalism**: High-performance formalization of Identity, Device, Network, Application, and Data layers.
-2. **Aggregate Trust Evaluation**: Carrier-grade engine for calculating cross-layer trust scores and evaluating real-time security flows.
-3. **Formal Policy Framework**: Intelligent orchestration of model-driven policies, context-aware evaluations, and formal logic enforcement.
-4. **Automated Incident Modeling**: Advanced modeling of security violations, automated response workflows, and risk mitigation strategies.
-5. **Continuous Governance Registry**: Carrier-grade engine for model lifecycle management, compliance mapping, and audit trail persistence.
-6. **Unified Model Dashboard**: Deep observability into model maturity, layer status, and global trust distribution.
+### 1. Principal Architecture: Global Zero Trust Reference Model & Formal Logic Plane
+This diagram illustrates the end-to-end flow from formal model definition and layered interaction modeling to trust verification, policy enforcement, and institutional model auditing.
+
+```mermaid
+graph LR
+    %% Subgraph Definitions
+    subgraph FormalModeling["Formal Logic & Definition"]
+        direction TB
+        IdentityModel["Identity Interaction Model"]
+        NetworkModel["Micro-Segmentation Logic"]
+        DataModel["Data Sensitivity Flow"]
+    end
+
+    subgraph IntelligenceEngine["Model Intelligence Hub"]
+        direction TB
+        API["FastAPI Model Gateway"]
+        PDP["Policy Decision Engine"]
+        Validator["Formal Verification Service"]
+        Aggregator["Risk & Trust Aggregator"]
+    end
+
+    subgraph InteractionPlane["Layered Trust Interactions"]
+        direction TB
+        DeviceLayer["Device Health & Posture"]
+        AppLayer["Application Access Flow"]
+        InfraLayer["Infrastructure Isolation"]
+    end
+
+    subgraph OperationsHub["Institutional Model Hub"]
+        direction TB
+        Scorecard["Model Maturity Scorecard"]
+        Analytics["Interaction Risk Analytics"]
+        Audit["Forensic Model Metadata Lake"]
+    end
+
+    subgraph DevOps["Model-as-Code Orchestration"]
+        direction TB
+        TF["Terraform Model Modules"]
+        OPA["Policy-as-Code (Rego) Hub"]
+        AuditSvc["Continuous Model Audit"]
+    end
+
+    %% Flow Arrows
+    FormalModeling -->|1. Define Formalism| API
+    API -->|2. Aggregate Signals| Aggregator
+    Aggregator -->|3. Request Decision| PDP
+    PDP -->|4. Verify Logic| Validator
+    
+    Validator -->|5. Enforce at Device| DeviceLayer
+    DeviceLayer -->|6. Authorize App| AppLayer
+    AppLayer -->|7. Secure Infra| InfraLayer
+    
+    API -->|8. Visualize Health| Scorecard
+    Scorecard -->|9. Track Anomalies| Analytics
+    Scorecard -->|10. Record Result| Audit
+    
+    TF -->|11. Provision Hub| IntelligenceEngine
+    OPA -->|12. Load Formal Logic| PDP
+    Audit -->|13. Improve Formalism| FormalModeling
+
+    %% Styling
+    classDef formal fill:#f5f5f5,stroke:#616161,stroke-width:2px;
+    classDef intel fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef interactions fill:#ede7f6,stroke:#311b92,stroke-width:2px;
+    classDef ops fill:#e0f2f1,stroke:#004d40,stroke-width:2px;
+    classDef devops fill:#fffde7,stroke:#f57f17,stroke-width:2px;
+
+    class FormalModeling formal;
+    class IntelligenceEngine intel;
+    class InteractionPlane interactions;
+    class OperationsHub ops;
+    class DevOps devops;
+```
+
+### 2. The Model Lifecycle Flow
+The continuous path of a security model from initial definition and formalization to active verification, application, monitoring, and institutional optimization.
+
+```mermaid
+graph LR
+    Define["Define Domain"] --> Formalize["Formalize Logic"]
+    Formalize --> Verify["Verify Invariants"]
+    Verify --> Apply["Apply to Ops"]
+    Apply --> Audit["Forensic Audit"]
+```
+
+### 3. Layered Trust Verification Model
+Executing cryptographically bound verification across the application, network, and device layers to ensure that trust is never assumed and always recalculated.
+
+```mermaid
+graph TD
+    Request["Access Request"] --> App["App Verification"]
+    App --> Net["Network Verification"]
+    Net --> Device["Device Verification"]
+    Device --> Success["Verified Session"]
+```
+
+### 4. Policy Decision (PDP) Formal Logic Flow
+Orchestrating the high-performance evaluation of access requests against mathematical trust models using standardized logic frameworks like Rego/OPA.
+
+```mermaid
+graph LR
+    Input["Context Input"] --> Engine["Logic Engine"]
+    Engine -->|Query| Rules["Formal Rule Library"]
+    Rules -->|Result| Engine
+    Engine --> Output["Boolean Decision"]
+```
+
+### 5. Multi-Dimensional Risk Aggregation Hub
+Merging diverse security signals—including identity status, environment context, and behavioral anomalies—into a single, high-fidelity trust score.
+
+```mermaid
+graph TD
+    I["Identity Signal"] --> Agg["Trust Aggregator"]
+    E["Environment Signal"] --> Agg
+    B["Behavioral Signal"] --> Agg
+    Agg --> Score["Composite Trust Score"]
+```
+
+### 6. Secure Flow Invariant Monitoring Architecture
+Continuously monitoring active traffic and access patterns for deviations from the formal reference model to identify potential breaches or misconfigurations.
+
+```mermaid
+graph LR
+    Flow["Live Access Flow"] --> Monitor["Invariant Monitor"]
+    Monitor -->|Mismatch| Alert["Security Deviation Alert"]
+    Monitor -->|Match| Stable["Model Consistency"]
+```
+
+### 7. Data Residency & Sovereign Trust Model
+Formally modeling trust and data flow requirements across geopolitical and sovereign boundaries to ensure compliance with global data residency regulations.
+
+```mermaid
+graph LR
+    EU["EU Data Zone"] -->|Verified Transfer| US["US Data Zone"]
+    US -->|Block| RU["Restricted Zone"]
+    EU --- Policy["Sovereign Trust Policy"]
+```
+
+### 8. Institutional Zero Trust Model Scorecard
+Grading organizational security performance based on key indicators: Model Coverage, Logic Consistency, and Mean Time to Violation Detection.
+
+```mermaid
+graph TD
+    Post["Model Integrity: 96%"] --> Risk["Logic Drift: 4%"]
+    Post --- C1["Layer Coverage (99%)"]
+    Post --- C2["Invariant Match (92%)"]
+```
+
+### 9. Identity & RBAC for Model Governance
+Managing fine-grained access to formal logic libraries, trust scoring thresholds, and model logs between Security Scientists, Architects, and Leads.
+
+```mermaid
+graph TD
+    Scientist["Security Scientist"] --> Formal["Manage Formal Logic"]
+    Architect["Security Architect"] --> Model["Apply to Architecture"]
+    Lead["Compliance Lead"] --> Audit["Verify Consistency"]
+```
+
+### 10. IaC Deployment: Model-as-Code Framework
+Using Terraform to deploy and manage the versioned distribution of the formal logic hubs, verification workers, and forensic model lakes.
+
+```mermaid
+graph LR
+    HCL["Infrastructure Code"] --> TF["Terraform Apply"]
+    TF --> Engine["Model Control Plane"]
+    Engine --> Blueprints["Standardized Models"]
+```
+
+### 11. Metadata Lake for Forensic Model Audit
+Storing long-term records of every model change, verification decision, and trust score calculation for institutional record-keeping and audit.
+
+```mermaid
+graph LR
+    Event["Model Event"] --> Stream["Forensic Stream"]
+    Stream --> Lake["Model Metadata Lake"]
+    Lake --> Trends["Trust & Logic Trends"]
+```
 
 ---
 
-## 📐 Architecture Storytelling: 12 Advanced Enterprise Diagrams
+## 🏛️ Core Modeling Pillars
 
-These high-level reference architectures represent enterprise-grade solutions designed for CTO-level presentations, demonstrating end-to-end data flows, strict security boundaries, and integration points across modern hybrid and multi-cloud environments.
-
-### 1. Enterprise Cloud Landing Zone (Hub & Spoke)
-*Business Purpose: Establishes a scalable, secure, and well-governed foundation for enterprise cloud workloads with centralized network inspection and identity management.*
-```mermaid
-graph TD
-    subgraph "On-Premises Corporate Network"
-        Users[Corporate Users]
-        DC[Active Directory]
-    end
-
-    subgraph "Cloud Core Infrastructure (Hub)"
-        direction TB
-        ERGateway[ExpressRoute / Direct Connect]
-        NVA[Next-Gen Firewall / WAF]
-        HubVNet[Hub Virtual Network]
-        ERGateway --> NVA
-        NVA --> HubVNet
-    end
-
-    subgraph "Cloud Workloads (Spokes)"
-        direction TB
-        SpokeApp[App Spoke VNet]
-        SpokeData[Data Spoke VNet]
-        AKS[Kubernetes Cluster]
-        SQL[(Cloud SQL / Postgres)]
-        SpokeApp --> AKS
-        SpokeData --> SQL
-    end
-
-    subgraph "Security & Identity Management"
-        IAM[Entra ID / AWS IAM]
-        SIEM[Microsoft Sentinel / SIEM]
-    end
-
-    Users -->|Private Link| ERGateway
-    DC -.->|Sync| IAM
-    HubVNet -->|VNet Peering| SpokeApp
-    HubVNet -->|VNet Peering| SpokeData
-    AKS -->|Private Endpoint| SQL
-    AKS -.->|Auth| IAM
-    HubVNet -.->|Logs| SIEM
-    SpokeApp -.->|Logs| SIEM
-```
-
-### 2. Zero Trust Security Architecture
-*Business Purpose: Implements a "never trust, always verify" model, enforcing continuous authentication, contextual access policies, and micro-segmentation across the enterprise.*
-```mermaid
-graph TD
-    subgraph "1. Verify Identity & Device"
-        User[End User / Employee]
-        Device[Managed Device]
-        MFA[Multi-Factor Auth]
-        IdP[Identity Provider]
-        User --> Device
-        Device --> MFA
-        MFA --> IdP
-    end
-
-    subgraph "2. Contextual Access Engine"
-        Policy[Zero Trust Policy Engine]
-        Risk[Risk Scoring / UEBA]
-        IdP --> Policy
-        Risk --> Policy
-    end
-
-    subgraph "3. Secure Access Edge (SSE)"
-        ZTNA[Zero Trust Network Access]
-        SWG[Secure Web Gateway]
-        CASB[Cloud App Security Broker]
-        Policy --> ZTNA
-        Policy --> SWG
-        Policy --> CASB
-    end
-
-    subgraph "4. Enterprise Resources"
-        SaaS[SaaS Applications]
-        IaaS[Cloud Workloads]
-        Data[(Sensitive Data Repositories)]
-        SWG --> SaaS
-        ZTNA --> IaaS
-        CASB --> Data
-    end
-
-    IaaS -.->|Telemetry| Risk
-    SaaS -.->|Telemetry| Risk
-```
-
-### 3. Generative AI & ML Enterprise Platform
-*Business Purpose: Provides a secure, scalable platform for building and deploying Large Language Models (LLMs) over enterprise data while protecting intellectual property.*
-```mermaid
-graph LR
-    subgraph "Client Applications"
-        Web[Web Portal]
-        Mobile[Mobile App]
-    end
-
-    subgraph "API & Security Gateway"
-        APIM[API Management]
-        WAF[Web Application Firewall]
-        APIM --> WAF
-    end
-
-    subgraph "GenAI Platform Zone"
-        Orchestrator[AI Orchestrator / LangChain]
-        LLM[Azure OpenAI / AWS Bedrock]
-        Embed[Embedding Model]
-        Orchestrator --> LLM
-        Orchestrator --> Embed
-    end
-
-    subgraph "Enterprise Data & Memory"
-        VectorDB[(Vector Database)]
-        DataLake[(Enterprise Data Lake)]
-        Indexer[Data Indexer / Crawler]
-        Indexer --> DataLake
-        Indexer --> VectorDB
-    end
-
-    Web --> APIM
-    Mobile --> APIM
-    WAF --> Orchestrator
-    Orchestrator <-->|Context Retrieval| VectorDB
-```
-
-### 4. DevSecOps & GitOps Pipeline
-*Business Purpose: Automates software delivery through a secure supply chain, embedding security scanning at every stage and enforcing infrastructure-as-code deployments.*
-```mermaid
-graph LR
-    subgraph "1. Code & Commit"
-        IDE[IDE / VS Code]
-        PreCommit[Pre-commit Hooks]
-        IDE --> PreCommit
-    end
-
-    subgraph "2. Source Control & CI"
-        Git[GitHub / GitLab]
-        SAST[SAST / SonarQube]
-        SCA[SCA / Dependabot]
-        Build[Container Build]
-        Git --> SAST
-        Git --> SCA
-        Git --> Build
-    end
-
-    subgraph "3. Artifact Repository"
-        Registry[Container Registry]
-        ImageScan[Image Vulnerability Scanner]
-        Registry --> ImageScan
-    end
-
-    subgraph "4. CD & Deployment"
-        GitOps[ArgoCD / Flux]
-        Infra[Terraform IaC]
-        GitOps --> Infra
-    end
-
-    subgraph "5. Production Environment"
-        K8s[Kubernetes Cluster]
-        Policy[OPA Gatekeeper / Kyverno]
-        K8s --> Policy
-    end
-
-    PreCommit -->|Push| Git
-    Build -->|Push Image| Registry
-    GitOps -->|Pull Image| Registry
-    GitOps -->|Deploy| K8s
-```
-
-### 5. Enterprise Data Platform (Mesh & Lakehouse)
-*Business Purpose: Democratizes data access by ingesting multi-modal sources into a governed Lakehouse, enabling advanced analytics, BI, and real-time event processing.*
-```mermaid
-graph LR
-    subgraph "Data Sources"
-        CRM[Salesforce / CRM]
-        ERP[SAP / ERP]
-        IoT[IoT Event Streams]
-    end
-
-    subgraph "Ingestion & Processing"
-        EventHub[Kafka / Event Hubs]
-        ADF[Data Factory / Airbyte]
-        Spark[Databricks / Spark Cluster]
-        CRM --> ADF
-        ERP --> ADF
-        IoT --> EventHub
-        ADF --> Spark
-        EventHub --> Spark
-    end
-
-    subgraph "Data Lakehouse"
-        Bronze[(Bronze / Raw)]
-        Silver[(Silver / Cleansed)]
-        Gold[(Gold / Curated)]
-        Spark --> Bronze
-        Bronze --> Silver
-        Silver --> Gold
-    end
-
-    subgraph "Data Consumption"
-        BI[PowerBI / Tableau]
-        ML[Machine Learning Models]
-        API[Data Service APIs]
-        Gold --> BI
-        Gold --> ML
-        Gold --> API
-    end
-```
-
-### 6. Enterprise Kubernetes (AKS/EKS) Platform
-*Business Purpose: Standardizes containerized workload orchestration with embedded security mesh, ingress routing, and native cloud-service integrations.*
-```mermaid
-graph TD
-    subgraph "Ingress & Routing"
-        LB[Cloud Load Balancer]
-        Ingress[Ingress Controller]
-        WAF[App Gateway WAF]
-        LB --> WAF
-        WAF --> Ingress
-    end
-
-    subgraph "Kubernetes Control Plane"
-        API[API Server]
-        ETCD[(etcd State)]
-        Sched[Scheduler]
-        API --> ETCD
-        API --> Sched
-    end
-
-    subgraph "Worker Nodes (App Workloads)"
-        PodA[Frontend Pods]
-        PodB[Backend Service Pods]
-        Mesh[Service Mesh / Istio]
-        Ingress --> Mesh
-        Mesh --> PodA
-        PodA --> PodB
-    end
-
-    subgraph "Platform Services"
-        CSI[Storage CSI]
-        CNI[Network CNI]
-        Sec[Runtime Security / Falco]
-        PodB --> CSI
-        PodB --> CNI
-        PodB --> Sec
-    end
-```
-
-### 7. Global Hub & Spoke Networking Architecture
-*Business Purpose: Connects global regions and on-premises datacenters via a highly available transit backbone, enforcing centralized firewalling and routing policies.*
-```mermaid
-graph TD
-    subgraph "Global Transit Backbone"
-        vWAN[Virtual WAN / Transit Gateway]
-        GlobalFW[Global NVA Firewall]
-        vWAN --> GlobalFW
-    end
-
-    subgraph "Region 1: North America"
-        Hub1[US Hub VNet]
-        Spoke1A[Prod Spoke US]
-        Spoke1B[Non-Prod Spoke US]
-        Hub1 --> Spoke1A
-        Hub1 --> Spoke1B
-    end
-
-    subgraph "Region 2: Europe"
-        Hub2[EU Hub VNet]
-        Spoke2A[Prod Spoke EU]
-        Spoke2B[Non-Prod Spoke EU]
-        Hub2 --> Spoke2A
-        Hub2 --> Spoke2B
-    end
-
-    subgraph "On-Premises / Edge"
-        HQ[Corporate HQ]
-        Branch[Branch Offices]
-    end
-
-    HQ -->|ExpressRoute / Direct Connect| vWAN
-    Branch -->|SD-WAN / IPsec| vWAN
-    vWAN --> Hub1
-    vWAN --> Hub2
-```
-
-### 8. Identity & Access Management (IAM) Broker
-*Business Purpose: Centralizes identity governance, enabling SSO, federated access, and conditional policies for employees, partners, and customers across all apps.*
-```mermaid
-graph LR
-    subgraph "External Identities"
-        B2C[Customers / B2C]
-        B2B[Partners / B2B]
-    end
-
-    subgraph "Internal Identities"
-        HR[HR System / Workday]
-        AD[On-Prem Active Directory]
-        HR -->|Provision| AD
-    end
-
-    subgraph "Identity Broker (Cloud IAM)"
-        Entra[Entra ID / Okta]
-        MFA[MFA / Authenticator]
-        CondAccess[Conditional Access Policies]
-        AD -->|Sync| Entra
-        B2C --> Entra
-        B2B --> Entra
-        Entra --> MFA
-        MFA --> CondAccess
-    end
-
-    subgraph "Enterprise Applications"
-        SaaS[O365 / Salesforce]
-        CloudApp[Cloud Native Apps]
-        Legacy[Legacy On-Prem Apps]
-        CondAccess -->|SAML / OIDC| SaaS
-        CondAccess -->|OAuth2| CloudApp
-        CondAccess -->|App Proxy| Legacy
-    end
-```
-
-### 9. Cloud Observability & Monitoring Platform
-*Business Purpose: Provides unified visibility into infrastructure, network, and application health, accelerating incident response through centralized logging and tracing.*
-```mermaid
-graph LR
-    subgraph "Telemetry Sources"
-        Infra[Cloud VMs / Network]
-        K8s[Kubernetes Metrics]
-        Apps[App Traces / APM]
-        Logs[Audit & Flow Logs]
-    end
-
-    subgraph "Collection & Routing"
-        Otel[OpenTelemetry Collector]
-        FluentBit[FluentBit / Promtail]
-        Infra --> Otel
-        K8s --> FluentBit
-        Apps --> Otel
-        Logs --> FluentBit
-    end
-
-    subgraph "Storage & Analysis"
-        Prometheus[(Prometheus)]
-        Elastic[(Elasticsearch / Loki)]
-        Jaeger[(Jaeger / Traces)]
-        Otel --> Prometheus
-        Otel --> Jaeger
-        FluentBit --> Elastic
-    end
-
-    subgraph "Visualization & Alerting"
-        Grafana[Grafana Dashboards]
-        Alert[AlertManager]
-        Pager[PagerDuty / Opsgenie]
-        Prometheus --> Grafana
-        Elastic --> Grafana
-        Jaeger --> Grafana
-        Prometheus --> Alert
-        Alert --> Pager
-    end
-```
-
-### 10. Multi-Cloud Resiliency & Active-Active BCDR
-*Business Purpose: Ensures business continuity and disaster recovery by distributing traffic across multiple cloud providers, utilizing asynchronous data replication.*
-```mermaid
-graph TD
-    subgraph "Global Traffic Routing"
-        DNS[Global DNS / Route53]
-        WAF[Global WAF / Cloudflare]
-        User[External Users] --> DNS
-        DNS --> WAF
-    end
-
-    subgraph "Primary Cloud (Azure / AWS)"
-        LB1[Load Balancer]
-        App1[Application Cluster]
-        DB1[(Primary Database)]
-        WAF --> LB1
-        LB1 --> App1
-        App1 --> DB1
-    end
-
-    subgraph "Secondary Cloud (GCP / AWS)"
-        LB2[Load Balancer]
-        App2[Application Cluster]
-        DB2[(Secondary DB - Read Replica)]
-        WAF -.->|Failover Traffic| LB2
-        LB2 --> App2
-        App2 --> DB2
-    end
-
-    subgraph "Data Replication"
-        Sync[Cross-Cloud Replication Engine]
-        DB1 -->|Async Replication| Sync
-        Sync --> DB2
-    end
-```
-
-### 11. Event-Driven Microservices Architecture
-*Business Purpose: Decouples domain services for independent scalability, using an asynchronous message bus to handle high-throughput, real-time event processing.*
-```mermaid
-graph LR
-    subgraph "Producers"
-        UI[Web/Mobile UI]
-        IoT[IoT Devices]
-        API[External API Hook]
-    end
-
-    subgraph "Event Broker"
-        Gateway[API Gateway]
-        Kafka[Event Bus / Kafka]
-        Gateway --> Kafka
-    end
-
-    subgraph "Consumers (Microservices)"
-        Order[Order Service]
-        Inventory[Inventory Service]
-        Notify[Notification Service]
-        Kafka -->|Topic: Orders| Order
-        Kafka -->|Topic: Stock| Inventory
-        Kafka -->|Topic: Alerts| Notify
-    end
-
-    subgraph "Data & State"
-        DB1[(NoSQL DB)]
-        DB2[(Relational DB)]
-        Cache[(Redis Cache)]
-        Order --> DB1
-        Inventory --> DB2
-        Notify --> Cache
-    end
-
-    UI --> Gateway
-    IoT --> Gateway
-    API --> Gateway
-```
-
-### 12. Secure Application Delivery & Edge Processing
-*Business Purpose: Protects public-facing applications from DDoS attacks and exploits at the edge, while optimizing content delivery through caching and bot mitigation.*
-```mermaid
-graph TD
-    subgraph "Edge / CDN Level"
-        User[End Users]
-        CDN[Content Delivery Network]
-        DDoS[DDoS Protection]
-        Bot[Bot Management Engine]
-        User --> CDN
-        CDN --> DDoS
-        DDoS --> Bot
-    end
-
-    subgraph "Security Perimeter"
-        WAF[Web Application Firewall]
-        API[API Gateway]
-        Bot --> WAF
-        WAF --> API
-    end
-
-    subgraph "Application Hosting"
-        AppService[App Service / ECS]
-        Serverless[Functions / Lambda]
-        API --> AppService
-        API --> Serverless
-    end
-
-    subgraph "Backend Services"
-        DB[(Managed Database)]
-        Storage[(Blob Storage)]
-        AppService --> DB
-        Serverless --> Storage
-    end
-```
+1.  **Formal Logic Foundation**: Defining security requirements as verifiable, mathematical invariants.
+2.  **Layered Interaction Modeling**: Standardizing how identity, network, and device layers interact under zero trust.
+3.  **Adaptive Trust Aggregation**: Dynamically calculating risk based on multi-dimensional real-time signals.
+4.  **Invariant Flow Monitoring**: Continuous verification of live system behavior against the formal model.
+5.  **Sovereign Trust Mapping**: Modeling data and identity flows across geopolitical and regulatory boundaries.
+6.  **Full Model Auditability**: Immutable recording of every model change and verification event for institutional forensics.
 
 ---
 
 ## 🛠️ Technical Stack & Implementation
 
-### Platform Engine & APIs
-- **Framework**: Python 3.11+ / FastAPI.
-- **Model Engine**: High-performance orchestration of cross-layer security modeling.
-- **Policy Framework**: Formal evaluation of trust scores and policy compliance.
-- **Incident Model**: Automated response workflows and incident modeling.
-- **Cache**: Redis for session tracking and real-time model status updates.
-- **Persistence**: PostgreSQL for model metadata, flow logs, and audit trails.
-- **Observability**: Prometheus/Grafana integration for model factory monitoring.
+### Model Engine & APIs
+*   **Framework**: Python 3.11+ / FastAPI.
+*   **Formal Verification Core**: Integration with OPA/Rego for high-performance logic evaluation.
+*   **Risk Orchestrator**: Custom engine for aggregating and weighting cross-layer security signals.
+*   **Interaction Monitor**: Intelligent engine for comparing live telemetry against model invariants.
+*   **State Management**: PostgreSQL (Metadata Lake) and Redis (Model State Cache).
 
-### Frontend (Model Command Center)
-- **Framework**: React 18 / Vite.
-- **Theme**: Emerald / Teal (Modern Security & Modeling aesthetic).
-- **Visualization**: Recharts for maturity trends and trust distribution.
+### Model Dashboard (UI)
+*   **Framework**: React 18 / Vite.
+*   **Theme**: Emerald, Teal, Slate (Modern scientific & security aesthetic).
+*   **Visualization**: Recharts for logic consistency trends, trust distribution, and model maturity.
 
-### Infrastructure
-- **Runtime**: AWS EKS (Kubernetes).
-- **Deployment**: Helm charts for model workers and evaluation gateways.
-- **IaC**: Terraform (Modular with Security Model focus).
+### Infrastructure & DevOps
+*   **Runtime**: AWS EKS or Azure Kubernetes Service (AKS).
+*   **Governance**: Policy-as-Code enforcement for all infrastructure and access requests.
+*   **IaC**: Modular Terraform for deploying the formal model hub and verification distributions.
+
+---
+
+## 🏗️ IaC Mapping (Module Structure)
+
+| Module | Purpose | Real Services |
+| :--- | :--- | :--- |
+| **`infrastructure/model_hub`** | Central management plane | EKS, PostgreSQL, Redis |
+| **`infrastructure/logic`** | Formal Rule Libraries | OPA, Rego, Git |
+| **`infrastructure/verification`** | Trust Verification Workers | Lambda, EventBridge |
+| **`infrastructure/auditing`** | Forensic model sinks | S3, Athena, Quicksight |
 
 ---
 
 ## 🚀 Deployment Guide
 
-### Local Development
+### Local Principal Environment
 ```bash
-# Clone the repository
+# Clone the model platform
 git clone https://github.com/devopstrio/zero-trust-reference-model.git
 cd zero-trust-reference-model
 
-# Setup environment
+# Configure environment
 cp .env.example .env
 
-# Launch the Model stack (API, Engines, DB, Redis, UI)
-make up
+# Launch the Model stack
+make init
 
-# Simulate a model flow evaluation
-make simulate
-
-# Enforce model-driven baseline policies
-make enforce
-
-# Validate reference model
-make test
+# Trigger a mock formal verification and trust-scoring simulation
+make simulate-model
 ```
+
 Access the Model Dashboard at `http://localhost:3000`.
 
 ---
 
 ## 📜 License
 Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+<div align="center">
+  <p>© 2026 Devopstrio. All rights reserved.</p>
+</div>
